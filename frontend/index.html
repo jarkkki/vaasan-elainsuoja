@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vaasan Eläinsuoja – adoptiot</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Vaasan Eläinsuoja 🐾</h1>
+      <p class="subtitle">
+        Tutustu adoptoitaviin eläimiin ja lähetä adoptiohakemus helposti verkossa.
+      </p>
+
+      <div id="status" class="status">Ladataan eläimiä...</div>
+
+      <div id="list-view">
+        <div id="animals" class="animal-grid"></div>
+      </div>
+
+      <div id="detail-view" class="detail hidden">
+        <button id="back-button" class="back-button">&larr; Takaisin listaan</button>
+        <div id="animal-detail"></div>
+
+        <h2>Adoptoi minut</h2>
+        <form id="adoption-form">
+          <div class="form-row">
+            <label for="applicantName">Nimi*</label>
+            <input id="applicantName" name="applicantName" required />
+          </div>
+          <div class="form-row">
+            <label for="applicantEmail">Sähköposti*</label>
+            <input id="applicantEmail" name="applicantEmail" type="email" required />
+          </div>
+          <div class="form-row">
+            <label for="message">Viesti</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="3"
+              placeholder="Kerro hieman itsestäsi ja kodistasi..."
+            ></textarea>
+          </div>
+          <button type="submit" class="primary-btn">Adoptoi minut</button>
+        </form>
+
+        <div id="adoption-result" class="adoption-result"></div>
+      </div>
+    </div>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
